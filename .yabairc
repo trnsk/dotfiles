@@ -16,10 +16,10 @@ yabai -m config mouse_follows_focus          on
 yabai -m config focus_follows_mouse          off
 yabai -m config window_placement             second_child
 yabai -m config window_topmost               off
-yabai -m config window_opacity               on
+yabai -m config window_opacity               off
 yabai -m config window_opacity_duration      0.0
 yabai -m config window_shadow                off
-yabai -m config window_border                on
+yabai -m config window_border                off
 yabai -m config window_border_placement      inset
 yabai -m config window_border_width          2
 yabai -m config window_border_radius         -1.5
@@ -44,7 +44,7 @@ yabai -m config right_padding                20
 yabai -m config window_gap                   15
 
 # float workspace
-# yabai -m config --space 5 layout         float
+# yabai -m config --space 5 layout           float
 
 # application rules
 yabai -m rule --add app="^Microsoft Outlook$" space=2
@@ -56,7 +56,9 @@ yabai -m rule --add app="^Music$" native-fullscreen=on
 yabai -m rule --add app="^safari$" native-fullscreen=on
 
 # unmanaged applications
-yabai -m rule --add app="^Quicktime$" manage=off
+yabai -m rule --add app="^Creator$" manage=off
+yabai -m rule --add app="^Preview Player$" manage=off
+yabai -m rule --add app="^Quicktime Player$" manage=off
 yabai -m rule --add app="^Disk Utility$" manage=off
 yabai -m rule --add app="^Deliveries$" manage=off
 # yabai -m rule --add app="^zoom$" manage=off
@@ -70,12 +72,12 @@ yabai -m rule --add label="Calculator" app="^Calculator$" manage=off
 yabai -m rule --add label="Dictionary" app="^Dictionary$" manage=off
 yabai -m rule --add label="mpv" app="^mpv$" manage=off
 yabai -m rule --add label="The Unarchiver" app="^The Unarchiver$" manage=off
-yabai -m rule --add app="^Adobe Photoshop$" manage=off
-yabai -m rule --add app="^Adobe$" manage=off
+yabai -m rule --add app="^Adobe Photoshop 2020$" space=5 manage=off
+yabai -m rule --add app="^Adobe Media Encoder2020$" manage=off
 
 
 # ubersicht bar
 yabai -m signal --add event=space_changed \
     action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"nibar-spaces-primary-jsx\"'"
 
-echo "yabai configuration loaded.."
+echo "yabai configuration excellent.."
